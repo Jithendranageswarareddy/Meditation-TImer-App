@@ -1,0 +1,134 @@
+:root {
+  --bg-gradient-start: #f4f7fb;
+  --bg-gradient-end: #e8edf6;
+  --surface: #ffffff;
+  --surface-soft: #f6f8fc;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --accent: #ff6b6b;
+  --border: #d8deea;
+  --shadow: 0 12px 30px rgba(31, 41, 55, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 760px;
+}
+
+.app-header {
+  background: linear-gradient(120deg, #ff7f50, #d18ac7);
+  color: #fff;
+  border-radius: 18px;
+  padding: 1.6rem 1rem;
+  box-shadow: var(--shadow);
+}
+
+.app-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.app-subtitle {
+  opacity: 0.92;
+  font-size: 0.95rem;
+}
+
+.app-main {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.app-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem;
+  background-color: var(--surface-soft);
+  box-shadow: 0 4px 16px rgba(31, 41, 55, 0.08);
+}
+
+.section-title {
+  color: var(--accent);
+  font-size: 1.4rem;
+  margin-bottom: 0.9rem;
+  font-weight: 500;
+}
+
+.timer-display {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #172033;
+}
+
+.stat-line {
+  font-size: 0.96rem;
+}
+
+.history-list .list-group-item {
+  border-radius: 10px;
+  margin-bottom: 0.55rem;
+  border: 1px solid var(--border);
+}
+
+.quote-text {
+  font-size: 1.03rem;
+  line-height: 1.6;
+}
+
+.quote-author {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.dark-mode {
+  --bg-gradient-start: #101827;
+  --bg-gradient-end: #111827;
+  --surface: #1a2332;
+  --surface-soft: #1c2738;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --accent: #ff9f43;
+  --border: #344154;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.dark-mode .app-header {
+  background: linear-gradient(120deg, #1f2937, #2e3f66);
+}
+
+.dark-mode .timer-display {
+  color: #f9fafb;
+}
+
+.dark-mode .history-list .list-group-item {
+  background-color: #243145;
+  color: #e5e7eb;
+}
+
+@media (max-width: 576px) {
+  .app-title {
+    font-size: 1.65rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .timer-display {
+    font-size: 1.8rem;
+  }
+}
